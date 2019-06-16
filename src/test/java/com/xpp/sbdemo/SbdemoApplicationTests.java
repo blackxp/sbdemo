@@ -66,8 +66,9 @@ public class SbdemoApplicationTests {
 
     @Test
     public void testBuild(){
-        //有点问题、、、感觉是构造函数的问题
-//        MerchantInfo merchantInfo = MerchantInfo.builder().isftp("Y").build();
-//        System.out.println(merchantInfo.getIsftp());
+        //有点问题、、、感觉是构造函数的问题。加上构造函数注解ok了
+        //果然，在使用build的时候，要加上无参和全参构造函数的注解
+        MerchantInfo merchantInfo = MerchantInfo.builder().isftp("Y").build();
+        System.out.println(merchantInfo.getIsftp());
     }
 }
